@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>欢迎注册</title>
+</head>
+
+<body>
+  <form id="registerForm">
+    <h2 style="text-align: center;">欢迎注册</h2>
+    <table>
+      <tr>
+        <td>用户名</td>
+        <td><input type="text" id="username" placeholder="请输入用户名"></td>
+      </tr>
+      <tr>
+        <td>密码</td>
+        <td><input type="password" id="password" placeholder="请输入密码"></td>
+      </tr>
+      <tr>
+        <td>身份证号</td>
+        <td><input type="text" id="id_number" placeholder="请输入身份证号"></td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td><input type="email" id="email" placeholder="请输入email"></td>
+      </tr>
+      <tr>
+        <td>家庭电话</td>
+        <td><input type="text" id="home_phone" placeholder="请输入家庭电话"></td>
+      </tr>
+      <tr>
+        <td>手机</td>
+        <td><input type="text" id="mobile" placeholder="请输入手机号"></td>
+      </tr>
+      <tr>
+        <td>通讯地址</td>
+        <td><input type="text" id="address" placeholder="请输入通讯地址"></td>
+      </tr>
+      <tr>
+        <td>邮编</td>
+        <td><input type="text" id="postcode" placeholder="请输入邮编"></td>
+      </tr>
+    </table>
+    <input type="submit" value="提交">
+  </form>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const idNumber = document.getElementById('id_number').value;
+      const email = document.getElementById('email').value;
+      const homePhone = document.getElementById('home_phone').value;
+      const mobile = document.getElementById('mobile').value;
+      const address = document.getElementById('address').value;
+      const postcode = document.getElementById('postcode').value;
+
+      // 这里假设跳转到example.com的注册处理页面，可根据实际修改
+      const link = `https://example.com/register?username=${username}&password=${password}&id_number=${idNumber}&email=${email}&home_phone=${homePhone}&mobile=${mobile}&address=${address}&postcode=${postcode}`;
+      window.open(link, '_blank');
+    });
+  </script>
+</body>
+
+</html>
